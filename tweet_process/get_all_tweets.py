@@ -6,10 +6,10 @@ import tweepy
 import time
 from datetime import datetime
 
-consumer_key = 'PeyfirPyr57NfUNK1fj5T421C'
-consumer_secret = 'ePt3MXl5kVxpGeHqeYNvjOUztm4onuJKooan6iZgsAoa1ORp1m'
-access_token = '1527198325-GV8HbhVNfgPes1wfnknZvm1VxJ6mozUg2kZrpSs'
-access_token_secret = 'ENTLiTd5bTx3qTyjJtHhyK7J4rADkzR7s60gOid3I5rGE'
+consumer_key = ''
+consumer_secret = ''
+access_token = ''
+access_token_secret = ''
 
 count_num = 0
 
@@ -34,7 +34,7 @@ def getEachTweet(userID, username, tweet):
 
 def getUserIdList():
     # Target_ID <tab> TARGET_ORIGINAL_TWEETS_COUNT  
-    with open('Bipolar Tweets by keyword Diagnosed Bipolar/lost_user') as open_file:
+    with open('Your file') as open_file:
         return [(line.split('\t')[0],line.split('\t')[1]) for line in open_file.readlines()]
 
 def timeout(STime):
@@ -65,7 +65,7 @@ def main():
         
         # To detect if the file has been collect before
         # If repeat, continue to next one
-        out_folder = 'Bipolar Tweets since Jan'
+        out_folder = 'Your file'
         if os.path.exists(out_folder + '/' + userID):
             print('Duplicate user: ' + userID +'\n')
             continue
