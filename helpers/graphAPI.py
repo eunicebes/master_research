@@ -18,3 +18,11 @@ def generate_bar_chart(input_list, chart_title):
     )
     fig = go.Figure(data=data, layout=layout)
     po.iplot(fig, filename='basic-bar')
+    
+def generate_histogram(input_list, chart_title):
+    data = [go.Histogram(x = input_list)]
+    layout = go.Layout(
+        title = chart_title,
+    )
+    fig = go.Figure(data=data, layout=layout)
+    po.iplot(fig, filename='basic histogram')
